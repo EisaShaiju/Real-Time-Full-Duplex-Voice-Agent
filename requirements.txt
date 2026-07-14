@@ -1,0 +1,17 @@
+# Core pipeline
+faster-whisper        # local STT (CTranslate2 backend)
+silero-vad            # VAD / endpointing (pulls in torch)
+torch                 # required by silero-vad
+sounddevice           # mic + speaker I/O
+numpy
+groq                  # streaming LLM client
+
+# TTS (primary + fallback)
+piper-tts             # primary neural TTS, local
+edge-tts              # fallback TTS (network)
+miniaudio             # decodes edge-tts mp3 -> PCM without ffmpeg
+
+# Evaluation harness
+jiwer                 # word error rate
+soundfile             # read .wav clips for the WER test
+matplotlib            # latency waterfall + WER/SNR plots
