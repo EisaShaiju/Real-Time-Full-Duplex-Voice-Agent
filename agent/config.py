@@ -19,7 +19,7 @@ PREROLL_MS = 300              # audio kept before speech starts (avoids clipping
 
 # -------------------------------------------------------------------------- STT
 STT_MODEL = "base.en"         # faster-whisper size; small.en for more accuracy
-STT_DEVICE = "auto"           # "cpu" | "cuda" | "auto"
+STT_DEVICE = "cpu"           # "cpu" | "cuda" | "auto"
 STT_COMPUTE_TYPE = "int8"     # int8 on CPU, float16 on GPU
 
 # -------------------------------------------------------------------------- LLM
